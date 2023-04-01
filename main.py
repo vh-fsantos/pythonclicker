@@ -9,13 +9,12 @@ if (pyautogui.confirm('Clique em OK para iniciar o processo, lembre-se de não m
     exit()
 
 # VARIÁVEIS EDITÁVEIS
-
+pyautogui.PAUSE = 1
 likemin = 1 # Número mínimo de videos assistidos para deixar like
-likemax = 10 # Número máximo de videos assistidos para deixar like
+likemax = 2 # Número máximo de videos assistidos para deixar like
 secondsmin = 5 # Número mínimo de segundos para deixar rolando o vídeo
-secondsmax = 45 # Número máximo de segundos para deixar rolando vídeo
-videos = 1 # Número de vídeos que deseja assistir
-search = '#sneakers' # Texto a ser procurado no Tiktok para filtrar os vídeos
+secondsmax = 10 # Número máximo de segundos para deixar rolando vídeo
+videos = 3 # Número de vídeos que deseja assistir
 
 # FIM VARIÁVEIS EDITÁVEIS
 
@@ -30,19 +29,14 @@ else :
     pyautogui.write('chrome')
     pyautogui.press('enter')
 
-time.sleep(3)
+time.sleep(2)
 
 pyautogui.write('https://tiktok.com')
 pyautogui.press('enter')
 
-time.sleep(6)
+time.sleep(10)
 
-pyautogui.moveTo(800, 130, duration=1)
-pyautogui.click()
-pyautogui.write(search)
-pyautogui.press('enter')
-
-pyautogui.moveTo(890, 365, duration=1)
+pyautogui.moveTo(362, 250, duration=1)
 pyautogui.click()
 
 while videos > 0:
@@ -55,4 +49,4 @@ while videos > 0:
     pyautogui.press('down')
     videos = videos - 1
 
-pyautogui.hotkey('ctrl', 'w')
+pyautogui.hotkey('command', 'w')
